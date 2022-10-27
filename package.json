@@ -23,11 +23,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "start:frontend": "react-scripts start",
-    "start:backend": "nodemon server.ts",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start:backend": "nodemon server.ts"
   },
   "eslintConfig": {
     "extends": [
