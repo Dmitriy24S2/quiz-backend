@@ -1,11 +1,13 @@
-import axios, { AxiosResponse } from 'axios'
+import axios from 'axios'
+import cors from 'cors'
 import * as dotenv from 'dotenv'
-import express, { Request, Response } from 'express'
-import { QuizData } from './src/interfaces'
+import express from 'express'
+
 dotenv.config()
 
 // const PORT = 8000
 const app = express()
+app.use(cors())
 
 app.get('/', (req, res) => {
   res.send('Hello World!') // Browser displays info
