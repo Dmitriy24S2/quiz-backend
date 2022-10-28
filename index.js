@@ -7,6 +7,10 @@ dotenv.config()
 // const PORT = 8000
 const app = express()
 
+app.get('/', (req, res) => {
+  res.send('Hello World!') // Browser displays info
+})
+
 app.get('/quiz-item', async (req, res) => {
   try {
     const URL = process.env.URL
