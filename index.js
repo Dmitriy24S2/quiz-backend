@@ -1,9 +1,9 @@
 import axios from 'axios'
 import cors from 'cors'
-import * as dotenv from 'dotenv'
+// import * as dotenv from 'dotenv'
 import express from 'express'
 
-dotenv.config()
+// dotenv.config()
 
 // const PORT = 8000
 const app = express()
@@ -15,10 +15,10 @@ app.get('/', (req, res) => {
 
 app.get('/quiz-item', async (req, res) => {
   try {
-    const URL = process.env.URL
+    const URL = process.env.REACT_APP_URL
     const response = await axios.get(URL, {
       headers: {
-        'X-Cassandra-Token': process.env.TOKEN,
+        'X-Cassandra-Token': process.env.REACT_APP_TOKEN,
         accept: 'application/json'
       }
     })
